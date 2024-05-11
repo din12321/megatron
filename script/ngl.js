@@ -32,9 +32,7 @@ module.exports.run = async ({ api, event, args }) => {
       const response = await axios.post('https://ngl.link/api/submit', {
         username: username,
         question: message,
-        deviceId: '23d7346e-7d22-4256-80f3-dd4ce3fd8878',
-        gameSlug: '',
-        referrer: '',
+        deviceId: ''
       });
 
       console.log(`[ NGL ] Message ${i + 1}: Status - ${response.status}`);

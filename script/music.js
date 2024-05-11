@@ -31,14 +31,13 @@ module.exports.run = async function({
 			const music = searchResults.videos[0];
 			const musicUrl = music.url;
 			const stream = ytdl(musicUrl, {
-				filter: "audioonly"
+				filter: "audioonly",
+				quality: "lowestaudio"
 			});
 			const time = new Date();
 			const timestamp = time.toISOString().replace(/[:.]/g, "-");
 			const filePath = path.join(__dirname, 'cache', `${timestamp}_music.mp3`);
 			stream.pipe(fs.createWriteStream(filePath));
-			stream.on('response', () => {});
-			stream.on('info', (info) => {});
 			stream.on('end', () => {
 				if (fs.statSync(filePath).size > 26214400) {
 					fs.unlinkSync(filePath);
