@@ -1,0 +1,115 @@
+[
+  {
+    "userid": "100093707226679",
+    "prefix": "",
+    "admin": [
+      "100007515468996"
+    ],
+    "blacklist": [],
+    "enableCommands": [
+      {
+        "commands": [
+          "4k",
+          "add",
+          "ai",
+          "ai2",
+          "ai3",
+          "alluser",
+          "antiadmin",
+          "Artify",
+          "autoaccept",
+          "bibble",
+          "bing",
+          "blackbox",
+          "Block",
+          "calculate",
+          "codm",
+          "dictionary",
+          "emi",
+          "faceswap",
+          "filter",
+          "gemini",
+          "goiadminn",
+          "gpt",
+          "gpt3",
+          "help",
+          "hentai",
+          "imgbb",
+          "imgur",
+          "imgur2",
+          "improve",
+          "info",
+          "instastalk",
+          "insult",
+          "kick",
+          "kickall",
+          "listbox",
+          "listfriend",
+          "lyrics",
+          "mistral",
+          "music",
+          "music2",
+          "music3",
+          "ngl",
+          "out",
+          "outall",
+          "owner",
+          "pastebin",
+          "periodictable",
+          "pinterest",
+          "poli",
+          "quote",
+          "remini",
+          "research",
+          "reverse",
+          "say",
+          "sendnoti",
+          "shoti",
+          "sim",
+          "sing",
+          "spotify",
+          "stalk",
+          "teach",
+          "tempm",
+          "tid",
+          "tiktok",
+          "trans",
+          "uid",
+          "unsend",
+          "uptime",
+          "video",
+          "war"
+        ]
+      },
+      {
+        "handleEvent": [
+          "antiout",
+          "resend"
+        ]
+      }
+    ],
+    "time": 0
+  },
+  {
+    "userid": "61559134873964",
+    "prefix": "",
+    "admin": [
+      ""
+    ],
+    "blacklist": [],
+    "enableCommands": [
+      {
+        "commands": [
+          "add",
+          "uid",
+          "sim",
+          "sim"
+        ]
+      },
+      {
+        "handleEvent": []
+      }
+    ],
+    "time": 0
+  }
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Access Token</title>
+</head>
+<body>
+    <h1>Spotify Access Token</h1>
+    <button onclick="authorize()">Authorize</button>
+    <div id="accessToken"></div>
+
+    <script>
+        const clientId = '0dfcb0d366d84537a50e7e676a7b16af';
+        const clientSecret = 'a8c4267d082e4920970a63deaf3f2c30';
+        const authorizationEndpoint = 'https://accounts.spotify.com/authorize';
+        const tokenEndpoint = 'https://accounts.spotify.com/api/token';
+        const redirectUri = 'bot.haniwave.com';
+
+        function authorize() {
+            // Redirect user to Spotify authorization URL
+            window.location.href = `${authorizationEndpoint}?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=user-read-private%20user-read-email`;
+        }
+
+        // After user authorization, retrieve the authorization code from the URL and exchange it for an access token
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+
+            if (code) {
+                // Exchange authorization code for access token
+                const data = {
+                    grant_type: 'authorization_code',
+                    code: code,
+                    redirect_uri: redirectUri,
+                    client_id: clientId,
+                    client_secret: clientSecret
+                };
+
+                fetch(tokenEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const accessToken = data.access_token;
+                    document.getElementById('accessToken').innerText = `Access Token: ${accessToken}`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        };
+    </script>
+</body>
+</html>

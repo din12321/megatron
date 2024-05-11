@@ -1,0 +1,114 @@
+/* Reset default browser styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', BlinkMacSystemFont, sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Gradient background animation */
+body {
+    background: linear-gradient(135deg, #f8d3f5, #a6f3f3, #a2e3f8, #ff9e9e);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Common container styles */
+.container {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 .5rem #fff, 0 0 .5rem #fff, 0 0 2rem #00ffff, 0 0 1rem #00ffff, 0 0 3rem #00ffff, inset 0 0 1.5rem #00ffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: 2px solid #fff;
+}
+
+
+/* Heading styles */
+h1 {
+    
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Textarea styles */
+.centered-textarea {
+    
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #ff00ff;
+    border: 1px solid #00ffff;
+    color: #261a1a;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #d676d6;
+    border: 1px solid #00ffff;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #ff00ff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/* Checkbox styles */
+.form-check input[type="checkbox"] {
+    color: #FFF;
+    margin-right: 10px;
+}
+
+.form-check-label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 22px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .form-check-label {
+        font-size: 12px;
+    }
+}
